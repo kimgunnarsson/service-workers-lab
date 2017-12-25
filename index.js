@@ -9,12 +9,12 @@ if('serviceWorker' in navigator) {
 			});
 
 			navigator.serviceWorker
-			.register('service-worker.scoped.js', {scope: 'scoped-test/'})
-			.then(function(registration) {
-				console.log('ServiceWorker registration successful with scope: ', registration.scope);
-			}, function(err) {
-				console.log('ServiceWorker registration failed: ', err);
-			});
+				.register('service-worker.scoped.js', {scope: '/scoped-test/'})
+				.then(function(registration) {
+					console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}, function(err) {
+					console.log('ServiceWorker registration failed: ', err);
+				});
 
 	});
 }
