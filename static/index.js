@@ -1,7 +1,7 @@
 if('serviceWorker' in navigator) {
 	window.addEventListener('load', function() {
 		navigator.serviceWorker
-			.register('../service-worker.js')
+			.register('service-worker.js')
 			.then(function(registration) {
 				console.log('ServiceWorker registration successful with scope: ', registration.scope);
 			}, function(err) {
@@ -9,7 +9,7 @@ if('serviceWorker' in navigator) {
 			});
 
 			navigator.serviceWorker
-				.register('../scoped-test/service-worker.js')
+				.register('scoped-test/service-worker.js')
 				.then(function(registration) {
 					console.log('ServiceWorker registration successful with scope: ', registration.scope);
 				}, function(err) {
