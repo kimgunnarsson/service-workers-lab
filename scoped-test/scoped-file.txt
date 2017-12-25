@@ -1,1 +1,2 @@
-I'm a scoped file...
+I AM AN ARBITRARY FILE FOR CACHING! 
+BUT I'M ALSO SCOPED! :)

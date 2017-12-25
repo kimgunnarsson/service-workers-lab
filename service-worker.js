@@ -1,5 +1,5 @@
-var CACHE_NAME = 'demo-site-cache-v1';
-var urlsToCache = ['arb-file.txt'];
+var CACHE_NAME = 'site-cache-v1';
+var urlsToCache = ['files/arbitrary-file.txt', 'files/arbitrary-file-2.txt'];
 
 self.addEventListener('install', function(event) {
 	event.waitUntil(
@@ -8,19 +8,6 @@ self.addEventListener('install', function(event) {
 		.then(function(cache){
 			console.log('Open cache');
 			return cache.addAll(urlsToCache);
-		})
-	);
-});
-
-self.addEventListener('activate', function(event) {
-	var whitelist = ['file-cache-v1'];
-	event.waitUntil(
-		caches.keys().then(function(cacheNames){
-			cacheNames.map(function(cacheName) {
-				if(whitelist.indexOf(cacheName) === -1) {
-					caches.delete(cacheName);
-				}
-			})
 		})
 	);
 });
