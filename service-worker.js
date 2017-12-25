@@ -16,13 +16,11 @@ self.addEventListener('activate', function(event) {
 	var whitelist = ['file-cache-v1'];
 	event.waitUntil(
 		caches.keys().then(function(cacheNames){
-			return Promises.all(
-				cacheNames.map(function(cacheName) {
-					if(whitelist.indexOf(cacheName) === -1) {
-						return caches.delete(cacheName);
-					}
-				})
-			);
+			cacheNames.map(function(cacheName) {
+				if(whitelist.indexOf(cacheName) === -1) {
+					caches.delete(cacheName);
+				}
+			})
 		})
 	);
 });
