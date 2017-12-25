@@ -1,0 +1,14 @@
+body {
+	background: black;
+	color:greenyellow;
+	font-family: monospace;
+}
+
+h1 {
+	display: flex;
+}
+
+h1::before {
+	content: '>';
+	margin-right: 2rem;
+}
