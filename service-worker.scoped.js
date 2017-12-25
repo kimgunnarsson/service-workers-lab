@@ -1,5 +1,5 @@
 var CACHE_NAME = 'demo-site-scoped-cache-v1';
-var urlsToCache = ['scoped-file.txt'];
+var urlsToCache = ['scoped-test/scoped-file.txt'];
 
 self.addEventListener('install', function(event) {
 	event.waitUntil(
